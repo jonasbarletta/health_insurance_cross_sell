@@ -105,10 +105,22 @@ Aqui começamos fazendo o Mapa Mental de Hipóteses abaixo. Fizemos as análises
 
 #### 3.5.1.1 Variável Resposta
 
+![image](https://user-images.githubusercontent.com/102927918/190503474-f2803f8f-5308-4a8a-b8bd-69d988549435.png)
 
+A quantidade de cliente que não querem aderir ao novo seguro é muito maior do que as que gostariam de aderir.
 
 #### 3.5.1.2 Variáveis Numéricas
 
+![image](https://user-images.githubusercontent.com/102927918/190503730-8ecea895-24f4-4158-999e-a08c308e7015.png)
+
+- Pessoas mais novas são a maioria dentro da pesquisa.
+- A maior parte possui habilitação para dirigir.
+- A quantidade de clientes que já possuem seguro de automóvel é quase igual a dos que não possuem.
+- A maior parte dos cliente possuem carros novos (menos de 2 anos).
+- A quantidade de clientes que já sofreram acidentes de carros é praticamente igual a dos que nunca sofreram.
+- A variável Anual Premium possui outliers muito distante da mediana.
+- A variável Vintage é bastante balanceada.
+- Não possuímos grandes informações variáveis Region Code e Policy Sales Channel, mas dentro de uma análise inicial as regiões dos clientes são ligeiramente balanceadas (com exceção de algumas regiões). Mas os canais de comunicação são bastante desbalanceados.
 
 #### 3.5.1.3 Variáveis Categóricas
 
