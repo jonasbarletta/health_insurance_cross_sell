@@ -101,18 +101,9 @@ Aqui começamos fazendo o Mapa Mental de Hipóteses abaixo. Fizemos as análises
 
 ### 3.5.1 Análise Univariada
 
-
-
-#### 3.5.1.1 Variável Resposta
-
-![image](https://user-images.githubusercontent.com/102927918/190503474-f2803f8f-5308-4a8a-b8bd-69d988549435.png)
-
-A quantidade de cliente que não querem aderir ao novo seguro é muito maior do que as que gostariam de aderir.
-
-#### 3.5.1.2 Variáveis Numéricas
-
 ![image](https://user-images.githubusercontent.com/102927918/190503730-8ecea895-24f4-4158-999e-a08c308e7015.png)
 
+- A quantidade de cliente que não querem aderir ao novo seguro é muito maior do que as que gostariam de aderir.
 - Pessoas mais novas são a maioria dentro da pesquisa.
 - A maior parte possui habilitação para dirigir.
 - A quantidade de clientes que já possuem seguro de automóvel é quase igual a dos que não possuem.
@@ -122,13 +113,45 @@ A quantidade de cliente que não querem aderir ao novo seguro é muito maior do 
 - A variável Vintage é bastante balanceada.
 - Não possuímos grandes informações variáveis Region Code e Policy Sales Channel, mas dentro de uma análise inicial as regiões dos clientes são ligeiramente balanceadas (com exceção de algumas regiões). Mas os canais de comunicação são bastante desbalanceados.
 
-#### 3.5.1.3 Variáveis Categóricas
-
-
 
 ### 3.5.2 Análise Bivariada
-Analisamos várias hipóteses, aqui apresentaremos apenas os XXXX Insights mais interessantes
+Analisamos várias hipóteses, aqui apresentaremos apenas os 6 Insights mais interessantes.
 
+- H1: Clientes mais velhos tem mais interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512101-6ac1e212-69de-4a08-be1b-db76bcecd4cf.png)
+
+Falso. Clientes na meia idade (entre 30 e 50 anos) possuem mais interesse em obter seguro de automóvel.
+
+- H2: Clientes mulheres tem mais interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512198-3814d3ea-22f2-4b37-8a81-52df64999f28.png)
+
+Falso. Clientes mulheres tem menos interesse em obter seguro de automóvel.
+
+- H5: Clientes mais antigos possuem mais interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512303-c34b1e74-7f51-4dcd-94aa-5f306667f14c.png)
+
+Falso Não há diferença significativa com relação ao tempo que o cliente possui o seguro de vida
+
+- H6: Clientes com veículos mais antigos tem menos interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512407-8624f51b-ce5c-4fd5-98e7-e5034055a0e2.png)
+
+Falso Clientes com veículos mais antigos tem mais interesse em obter seguro de automóve
+
+- H7: Clientes com veículos que já foram danificados tem mais interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512533-95a57d0f-9a13-4891-90ee-8baf012122bf.png)
+
+Verdade Clientes com veículos que já foram danificados tem MUITO mais interesse em obter seguro de automóvel
+
+- H8: Clientes que já possuem seguro de automóvel em outra seguradora possuem menos interesse em obter seguro de automóvel.
+
+![image](https://user-images.githubusercontent.com/102927918/190512571-ea616fb5-80f7-4a49-9b4d-af9c36a91d52.png)
+
+Verdade Clientes que já possuem seguro de automóvel em outra seguradora possuem EXTREMAMENTE MENOS interesse em obter um novo seguro.
 
 
 ## 3.6 Modelagem dos Dados
