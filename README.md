@@ -153,24 +153,54 @@ Verdade Clientes com veículos que já foram danificados tem MUITO mais interess
 
 Verdade Clientes que já possuem seguro de automóvel em outra seguradora possuem EXTREMAMENTE MENOS interesse em obter um novo seguro.
 
+## 3.6 Preparação dos Dados
 
-## 3.6 Modelagem dos Dados
+Para a preparação dos dados tilizamos duas estratégias de "rescaling" e algumas de "encoding", alguns atributos já tinham sofrido alterações na etapa de Features Engineering tais como:
 
-Começamos essa etapa com a preparação dos dados para a implementação dos modelos de Machine Learning. Para os dados númericos e não ciclícos utilizamos algumas estratégias de *rescaling* como *RobustScaler* e *MinMaxScaler*. Já para os dados categóricos fizemos o *encoding* dessas variáveis, entre as estratégias utilizadas estão: *One Hot Encoding*, *Label Encoding* e *Ordinal Encoding*. Para a variável resposta ('sales') fizemos uma transformação logarítimica e para as variáveis de natureza cíclica realizamos transformações trigonométricas.
+- Gender: M e F foram substituídos por 1 e 0, respectivamente;
+- Vehicle Age: '< 1 Year', '1-2 Year' e '> 2 Year' foram substituídos por, 0.5, 1.5 e 2.5, respectivamente;
+- Vehicle Damage: Yes e No foram susbtituídos por 1 e 0, respectivamente.
 
-Após as transformações das variáveis, é necessário selecionar os melhores atributos para o treino dos modelos de ML. Para isso usamos o algoritmo Boruta, que é um métodos baseado Random Forest e funcionamento muito bem com modelos de árvore como Random Forest e XGBoost.
+As demais variáveis foram feitos os seguintes procedimentos:
+- Annual Premium: possui distribuição próxima da normal, então optamos por uma padronização (Standard Scaler)
+- Age e Vintage: não possuem distribuição próxima da normal, então optamos pelo normalização min-max (MinMaxScaler)
+- Region Code: optamos pelo 'Target Encoding'
+- Policy Sales Channel: optamos pelo 'Frequency Encoding'
 
-## 3.7 Algoritmos de Machine Learning
+## 3.7 Seleção dos Atributos
+
+A seleção dos atributos que farão parte do modelo de Machine Learning foi feita a partir da feature_importance da ExtraTreeClassifier
+
+Feature ranking:
+|feature|  importance|
+|-------|------------|
+|vintage|0.280894|               
+|annual_premium    |0.248784|        
+|age     |0.153679|                  
+|region_code    |0.106334|           
+|vehicle_damage     |0.079504|
+|policy_sales_channel     |0.060078|  
+|previously_insured     |0.047978|    
+|vehicle_age     |0.016770|           
+|gender     |0.005482|                
+|driving_license     |0.000498|  
+
+![image](https://user-images.githubusercontent.com/102927918/190712511-fc96877d-051b-4ed3-a382-e4d35bbb98a0.png)
+
+Dessa forma optamos pelos 7 melhores atributos: 'vintage', 'annual_premium', 'age', 'region_code', 'vehicle_damage', 'policy_sales_channel', 'previously_insured'.
+
+## 3.8Algoritmos de Machine Learning
 
 
-## 3.8 Avaliação do Algoritmo
 
-### 3.8.1 Performance de Negócio
+## 3.9Avaliação do Algoritmo
 
-### 3.8.2 Performance do Modelo
+### 3.91 Performance de Negócio
+
+### 3.92 Performance do Modelo
 
 
-## 3.9 Deploy do Modelo em Produção
+## 3.10 Deploy do Modelo em Produção
 
 Entedemos que o modelo gerou grandes resultados, superando muito o modelo aleatório, mas ao final desse ciclo optamos por não colocar o modelo em produção. Fizemos apenas alguns testes locais. Dessa forma faremos mais um ciclo onde serão acrescentadas novas análises, testadas novas features, outros encoders, realizaremos Cross-Validation do modelo e faremos o fine-tunning dos parâmetros do modelo. Ao final do próximo ciclo esperamos colocar o modelo em produção.
 
