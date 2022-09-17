@@ -252,7 +252,7 @@ Para atingir 80% dos interessados é necessário contatar 39650 clientes.
 
 | Modelo                     | Precision at 2000 | Recall at 2000 |  
 |----------------------------|-------------------|----------------|
-|KNN                         |0.3138             |0.0594          |
+|KNN                         |0.3138             |0.06594         |
 |Regressão Logística         |0.2573             |0.05407         |
 |Extra Tree                  |0.3213             |0.06752         |
 |Random Forest               |0.3518             |0.07392         |
