@@ -197,7 +197,7 @@ Agora com as variáveis ajustadas e selecionadas, estamos prontos para aplicar o
 - Regressão Logística 
 - Extra Tree 
 - Random Forest 
-- Light Gradiente Boost Machine (LGBM). 
+- Light Gradient Boost Machine (LGBM). 
 
 Para cada modelo, fizemos dois gráficos: A Curva de Ganho Acumulativo e A Curva Lift.
 A primeira é um gráfico de 'porcentagem da amostra' x 'porcentagem de interessados (ganho)', ou seja, quanto mais "rápido" essa curva chegar no topo (y = 1) melhor ela é.
@@ -223,25 +223,39 @@ A segunda é um gráfico de 'porcentagem da amostra' x 'lift' , que mostra quant
 ![image](https://user-images.githubusercontent.com/102927918/190857315-165cee2d-bd5f-43ba-8942-52919322b23d.png)
 ![image](https://user-images.githubusercontent.com/102927918/190857503-d0dc67b6-67a1-4063-86a2-43038a51cb92.png)
 
-### 3.8.5 Light Gradiente Boost Machine (LGBM)
+### 3.8.5 Light Gradient Boost Machine (LGBM)
 
 ![image](https://user-images.githubusercontent.com/102927918/190857519-6a3b30b2-60fc-4de2-9fdb-373ff4c19c6d.png)
 ![image](https://user-images.githubusercontent.com/102927918/190857524-39edfcc1-7dfc-44ad-8325-d4f48a323fb8.png)
 
-
+Diante desses resultados optamos por seguir com o Light Gradient Boost Machine (LGBM) que atingiu melhores resultados e é mais leve que os outros que também atingiram bons resultados, como Random Forest e Extra Tree. 
 
 ## 3.9 Avaliação do Algoritmo
 
 ### 3.9.1 Performance de Negócio
 
+Vamos voltar as perguntas que foram feitas nas primeiras etapas do projeto, nesse momento já temos dados suficientes para respondê-las. 
 
+Para as 20000 primeiras ligações o modelo aleatório atingirá 15,74% do interessados, enquanto a nossa solução atinge 46,52%. Essa diferença percentual significa um aumento de 195,46% no faturamento.
+
+Para as 40000 primeiras ligações o modelo aleatório atingirá 31,48% do interessados, enquanto a nossa solução atinge 80,46%. Essa diferença percentual significa um aumento de 155,55% no faturamento.
+
+Para atingir 80% dos interessados é necessário contatar 39650 clientes.
 
 ### 3.9.2 Performance do Modelo
+
+| Modelo                     | Precision at 2000 | Recall at 2000 |  
+|----------------------------|-------------------|----------------|
+|KNN                         |0.3138             |0.0594          |
+|Regressão Logística         |0.2573             |0.05407         |
+|Extra Tree                  |0.3213             |0.06752         |
+|Random Forest               |0.3518             |0.07392         |
+|Light Gradient Boost Machine|0.4362             |0.09167         |
 
 
 ## 3.10 Deploy do Modelo em Produção
 
-Entedemos que o modelo gerou grandes resultados, superando muito o modelo aleatório, mas ao final desse ciclo optamos por não colocar o modelo em produção. Fizemos apenas alguns testes locais. Dessa forma faremos mais um ciclo onde serão acrescentadas novas análises, testadas novas features, outros encoders, realizaremos Cross-Validation do modelo e faremos o fine-tunning dos parâmetros do modelo. Ao final do próximo ciclo esperamos colocar o modelo em produção.
+Entendemos que o modelo gerou grandes resultados, superando muito o modelo aleatório, mas ao final desse ciclo optamos por não colocar o modelo em produção. Fizemos apenas alguns testes locais. Dessa forma faremos mais um ciclo onde serão acrescentadas novas análises, testadas novas features, outros encoders, realizaremos Cross-Validation do modelo e faremos o fine-tunning dos parâmetros do modelo. Ao final do próximo ciclo esperamos colocar o modelo em produção.
 
 # 4 Conclusão
 
