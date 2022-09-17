@@ -236,9 +236,15 @@ Diante desses resultados optamos por seguir com o Light Gradient Boost Machine (
 
 Vamos voltar as perguntas que foram feitas nas primeiras etapas do projeto, nesse momento já temos dados suficientes para respondê-las. 
 
-Para as 20000 primeiras ligações o modelo aleatório atingirá 15,74% do interessados, enquanto a nossa solução atinge 46,52%. Essa diferença percentual significa um aumento de 195,46% no faturamento.
+**Qual a porcentagem de clientes interessados em adquirir um seguro de automóvel, o time de vendas conseguirá contatar fazendo 20.000 ligações?**
 
-Para as 40000 primeiras ligações o modelo aleatório atingirá 31,48% do interessados, enquanto a nossa solução atinge 80,46%. Essa diferença percentual significa um aumento de 155,55% no faturamento.
+Para as 20.000 primeiras ligações o modelo aleatório atinge 15,74% do interessados, enquanto a nossa solução atinge 46,52%. Essa diferença percentual significa um aumento de 195,46% no faturamento.
+
+**E se a capacidade do time de vendas aumentar para 40.000 ligações, qual a porcentagem de clientes interessados em adquirir um seguro de automóvel o time de vendas conseguirá contatar?**
+
+Para as 40.000 primeiras ligações o modelo aleatório atinge 31,48% do interessados, enquanto a nossa solução atinge 80,46%. Essa diferença percentual significa um aumento de 155,55% no faturamento.
+
+**Quantas ligações o time de vendas precisa fazer para contatar 80% dos clientes interessados em adquirir um seguro de automóvel?**
 
 Para atingir 80% dos interessados é necessário contatar 39650 clientes.
 
@@ -257,10 +263,13 @@ Para atingir 80% dos interessados é necessário contatar 39650 clientes.
 
 Entendemos que o modelo gerou grandes resultados, superando muito o modelo aleatório, mas ao final desse ciclo optamos por não colocar o modelo em produção. Fizemos apenas alguns testes locais. Dessa forma faremos mais um ciclo onde serão acrescentadas novas análises, testadas novas features, outros encoders, realizaremos Cross-Validation do modelo e faremos o fine-tunning dos parâmetros do modelo. Ao final do próximo ciclo esperamos colocar o modelo em produção.
 
-# 4 Conclusão
+# 4 Etapas do Segundo Ciclo do Projeto
 
 
-# 5 Próximos Passos
+# 5 Conclusão
+
+
+# 6 Próximos Passos
  
 
 
