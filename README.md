@@ -172,18 +172,18 @@ As demais variáveis foram feitos os seguintes procedimentos:
 A seleção dos atributos que farão parte do modelo de Machine Learning foi feita a partir da feature_importance da ExtraTreeClassifier
 
 Feature ranking:
-|feature|  importance|
-|-------|------------|
-|vintage|0.280894|               
-|annual_premium    |0.248784|        
-|age     |0.153679|                  
-|region_code    |0.106334|           
-|vehicle_damage     |0.079504|
-|policy_sales_channel     |0.060078|  
-|previously_insured     |0.047978|    
-|vehicle_age     |0.016770|           
-|gender     |0.005482|                
-|driving_license     |0.000498|  
+|feature              |  importance|
+|---------------------|------------|
+|vintage              |0.280894    |           
+|annual_premium       |0.248784    |        
+|age                  |0.153679    |                  
+|region_code          |0.106334    |           
+|vehicle_damage       |0.079504    |
+|policy_sales_channel |0.060078    |  
+|previously_insured   |0.047978    |    
+|vehicle_age          |0.016770    |           
+|gender               |0.005482    |                
+|driving_license      |0.000498    |  
 
 ![image](https://user-images.githubusercontent.com/102927918/190712511-fc96877d-051b-4ed3-a382-e4d35bbb98a0.png)
 
