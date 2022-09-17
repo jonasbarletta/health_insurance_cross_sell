@@ -189,15 +189,54 @@ Feature ranking:
 
 Dessa forma optamos pelos 7 melhores atributos: 'vintage', 'annual_premium', 'age', 'region_code', 'vehicle_damage', 'policy_sales_channel', 'previously_insured'.
 
-## 3.8Algoritmos de Machine Learning
+## 3.8 Algoritmos de Machine Learning
+
+Agora com as variáveis ajustadas e selecionadas, estamos prontos para aplicar os algoritmos de Machine Learning. Mas antes de analisarmos os modelos, é importante lembrar que problema não se trata de classificar os clientes com 1 ou 0 (irá contratar ou não irá contratar o seguro), mas sim ranqueá-los com relação a probabilidade de contratar o serviço (Learning to Rank). Nesse projeto testamos cinco modelos:
+
+- KNN (K-Nearest Neighbors)
+- Regressão Logística 
+- Extra Tree 
+- Random Forest 
+- Light Gradiente Boost Machine (LGBM). 
+
+Para cada modelo, fizemos dois gráficos: A Curva de Ganho Acumulativo e A Curva Lift.
+A primeira é um gráfico de 'porcentagem da amostra' x 'porcentagem de interessados (ganho)', ou seja, quanto mais "rápido" essa curva chegar no topo (y = 1) melhor ela é.
+A segunda é um gráfico de 'porcentagem da amostra' x 'lift' , que mostra quantas vezes o modelo é superior com relação ao modelo aleatório para cada porcentagem da amostra.
+
+### 3.8.1 KNN (K-Nearest Neighbors)
+
+![image](https://user-images.githubusercontent.com/102927918/190857010-5c304b7a-d977-4097-8b78-af8e99b98d9a.png)
+![image](https://user-images.githubusercontent.com/102927918/190857025-ff9bd7e6-e045-4b64-95c3-de2bcaeba692.png)
+
+### 3.8.2 Regressão Logística
+
+![image](https://user-images.githubusercontent.com/102927918/190857085-2cb89395-51ea-4df5-adc2-a66122cd1c99.png)
+![image](https://user-images.githubusercontent.com/102927918/190857089-2006b5ed-9ca6-4481-a8fe-15e6ab52bc38.png)
+
+### 3.8.3 Extra Tree 
+
+![image](https://user-images.githubusercontent.com/102927918/190857289-dbc51753-f9a5-45c3-b3aa-0739ffddd602.png)
+![image](https://user-images.githubusercontent.com/102927918/190857298-842d6b48-846d-4650-b4f7-cbb10e4cc891.png)
+
+### 3.8.4 Random Forest
+
+![image](https://user-images.githubusercontent.com/102927918/190857315-165cee2d-bd5f-43ba-8942-52919322b23d.png)
+![image](https://user-images.githubusercontent.com/102927918/190857503-d0dc67b6-67a1-4063-86a2-43038a51cb92.png)
+
+### 3.8.5 Light Gradiente Boost Machine (LGBM)
+
+![image](https://user-images.githubusercontent.com/102927918/190857519-6a3b30b2-60fc-4de2-9fdb-373ff4c19c6d.png)
+![image](https://user-images.githubusercontent.com/102927918/190857524-39edfcc1-7dfc-44ad-8325-d4f48a323fb8.png)
 
 
 
-## 3.9Avaliação do Algoritmo
+## 3.9 Avaliação do Algoritmo
 
-### 3.91 Performance de Negócio
+### 3.9.1 Performance de Negócio
 
-### 3.92 Performance do Modelo
+
+
+### 3.9.2 Performance do Modelo
 
 
 ## 3.10 Deploy do Modelo em Produção
@@ -212,10 +251,32 @@ Entedemos que o modelo gerou grandes resultados, superando muito o modelo aleat�
 
 
 # 6 Referências
-[1] LOPES, Meigarom. Curso DS em Produção - Comunidade DS.
+Gráficos:
+[1] https://www.python-graph-gallery.com/
 
-[2] Wikpédia. Cramér's V, https://en.wikipedia.org/wiki/Cram%C3%A9r%27s_V, último acesso: 24/07/2022
+[2] https://www.python-graph-gallery.com/stacked-and-percent-stacked-barplot
 
-[3] ROY, Baijayanta, All about Categorical Variable Encoding, https://towardsdatascience.com/all-about-categorical-variable-encoding-305f3361fd02, último acesso: 24/07/2022
+Sobre as métricas de Ranking
+[3] https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
 
+[4] https://stats.stackexchange.com/questions/159657/metrics-for-evaluating-ranking-algorithms
+
+[5] https://archive.siam.org/meetings/sdm10/tutorial1.pdf
+
+[6] https://brianmcfee.net/papers/mlr.pdf
+
+Curvas Ranking e Lift
+[7] https://towardsdatascience.com/meaningful-metrics-cumulative-gains-and-lyft-charts-7aac02fc5c14
+
+Exemplos de Problemas de Métrica
+
+[8] https://towardsdatascience.com/20-popular-machine-learning-metrics-part-2-ranking-statistical-metrics-22c3e5a937b6
+
+[9] Bias and Variance Book Machine Learning: An Algorithmic Perspective, by Stephen Marsland - Capítulo 02 YouTube: StatQuest
+
+[10] Random Forest Model Book Machine Learning: An Algorithmic Perspective, by Stephen Marsland - Capítulo 13
+
+[11] https://stats.stackexchange.com/questions/262794/why-does-a-decision-tree-have-low-bias-high-variance
+
+[12] Paper Original da Random Forest https://link.springer.com/article/10.1023/A:1010933404324
 
