@@ -265,21 +265,63 @@ Entendemos que o modelo gerou grandes resultados, superando muito o modelo aleat
 
 # 4 Etapas do Segundo Ciclo do Projeto
 
+Para o segundo ciclo do projeto falaremos apenas das etapas que sofreram alterações mais significativas, entre elas: features engineering, performance dos modelos de ML e performance de negócio.
+
+## 4.1 Features Engineering 
+Nesse ciclo foram testasdas diversas features baseadas nos atributos já existentes na base de dados, porém a única que se mostrou eficaz nos testes realizados foi uma feature baseada na idade dos clientes onde classificamos os clientes com menos de 25 anos como '1' e '0' para os demais. 
+
+## 4.2 Performance dos Modelos
+
+Assim como no ciclo anterior testamos os mesmos cinco diferente modelos de Machine Learning: KNN (K-Nearest Neighbors), Regressão Logística, Extra Tree, Random Forest e Light Gradient Boost Machine (LGBM). Porem dessa vez realizamos o Cross-Validation e o resultado após o CV, coonsiderando as métricas de Precision at 2000 e Recall at 2000 foi: 
+
+|Modelo              |	Precision at 2000 CV	| Recall at 2000 CV|
+|--------------------|----------------------- |------------------|
+|KNN                 |0.3346 +/- 0.006  	    |0.0717 +/- 0.0013 |
+|Logistic Regression |0.3356 +/- 0.0103	      |0.0719 +/- 0.0022 | 
+|Extra Tree	         |0.3522 +/- 0.0077	      |0.0754 +/- 0.0016 |
+|Random Forest	     |0.3689 +/- 0.0083	      |0.079 +/- 0.0018  |
+|LGBM              	 |0.4491 +/- 0.0113	      |0.0962 +/- 0.0024 |
+
+Mais uma vez o LGBM se mostrou com uma performance melhor do que os outros, então a partir de agora manteremos o projeto apenas com esse modelo.
+
+## 4.3 Performance de Negócio
+
+Voltando mais uma vez as perguntas que foram feitas nas primeiras etapas do projeto.
+
+**Qual a porcentagem de clientes interessados em adquirir um seguro de automóvel, o time de vendas conseguirá contatar fazendo 20.000 ligações?**
+
+Para as 20.000 primeiras ligações o modelo aleatório atinge 15,74% do interessados, enquanto a nossa solução atinge 46,82%. Essa diferença percentual significa um aumento de 197,39% no faturamento.
+
+**E se a capacidade do time de vendas aumentar para 40.000 ligações, qual a porcentagem de clientes interessados em adquirir um seguro de automóvel o time de vendas conseguirá contatar?**
+
+Para as 40.000 primeiras ligações o modelo aleatório atinge 31,48% do interessados, enquanto a nossa solução atinge 80,62%. Essa diferença percentual significa um aumento de 156,05% no faturamento.
+
+**Quantas ligações o time de vendas precisa fazer para contatar 80% dos clientes interessados em adquirir um seguro de automóvel?**
+
+Para atingir 80% dos interessados é necessário contatar 39532 clientes.
+
+## 4.4 Deploy do Modelo em Produção
+
+(em breve)
 
 # 5 Conclusão
 
+O objetivo principal do projeto foi alcançado com sucesso. Com a técnica de Learning to Rank conseguimos ranquear os clientes mais propensos à compra do novo seguro e garantir uma diferença percentual de quase 200% quando comparado com um raqueamento aleatório para 20.000 ligações. Para 40.000 ligações a diferença foi quase 160%. Resultados muito satisfatórios que permitem acessar os clientes com mais facilidade, gastando menos e lucrando mais.
 
 # 6 Próximos Passos
  
+A próxima etapa será colocar o modelo em produção e criar uma tabela no GoogleSheets onde qualquer um conseguirá utilizar o modelo para futuros possíveis clientes. Além disso, buscar novas features para melhorar ainda mais o ranqueamento dos clientes.
 
 
 # 6 Referências
 Gráficos:
+
 [1] https://www.python-graph-gallery.com/
 
 [2] https://www.python-graph-gallery.com/stacked-and-percent-stacked-barplot
 
 Sobre as métricas de Ranking
+
 [3] https://queirozf.com/entries/evaluation-metrics-for-ranking-problems-introduction-and-examples
 
 [4] https://stats.stackexchange.com/questions/159657/metrics-for-evaluating-ranking-algorithms
@@ -289,6 +331,7 @@ Sobre as métricas de Ranking
 [6] https://brianmcfee.net/papers/mlr.pdf
 
 Curvas Ranking e Lift
+
 [7] https://towardsdatascience.com/meaningful-metrics-cumulative-gains-and-lyft-charts-7aac02fc5c14
 
 Exemplos de Problemas de Métrica
