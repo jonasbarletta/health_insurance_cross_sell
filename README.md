@@ -313,7 +313,7 @@ O objetivo principal do projeto foi alcançado com sucesso. Com a técnica de Le
 A próxima etapa será colocar o modelo em produção e criar uma tabela no GoogleSheets onde qualquer um conseguirá utilizar o modelo para futuros possíveis clientes. Além disso, buscar novas features para melhorar ainda mais o ranqueamento dos clientes.
 
 
-# 6 Referências
+# 7 Referências
 Gráficos:
 
 [1] https://www.python-graph-gallery.com/
