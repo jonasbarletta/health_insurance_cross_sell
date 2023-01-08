@@ -87,7 +87,7 @@ Agora que os dados estão coletados partiremos para a análise descritiva.
 
 ## 3.3 Análise Descritiva
 
-Analisar os dados de uma forma global é importante para se entender que tipo de dados serão estudados e modelados. Nessa etapa, buscamos entender a quantidade de linhas e colunas do conjunto de dados, se há ou não valores faltantes, as tipos das variáveis, se a variáveis numéricas formam ou não uma distribuição normal  e como estão distribuidas a variáveis categóricas. Nessa etapa não é esperado encontrar grandes resultados ou insights, mas é essencial para o entendimento dos dados.
+Analisar os dados de uma forma global é importante para se entender que tipo de dados serão estudados e modelados. Nessa etapa, buscamos entender a quantidade de linhas e colunas do conjunto de dados, se há ou não valores faltantes, os tipos das variáveis, se as variáveis numéricas formam ou não uma distribuição normal  e como estão distribuidas a variáveis categóricas. Nessa etapa não é esperado encontrar grandes resultados ou insights, mas é essencial para o entendimento dos dados.
 
 ## 3.4 Limpeza dos Dados
 
