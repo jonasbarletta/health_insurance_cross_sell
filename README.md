@@ -83,7 +83,7 @@ Os atributos apresentados nos conjunto de dados são:
 | Vintage                           | número de dias que o cliente se associou à empresa através da compra do seguro de saúde |
 | Response                          | 0, o cliente não tem interesse e 1, o cliente tem interesse |
 
-Agora que os dados estão coletados partiremos para a limpeza.
+Agora que os dados estão coletados partiremos para a análise descritiva.
 
 ## 3.3 Análise Descritiva
 
